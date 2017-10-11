@@ -1,0 +1,3 @@
+[submodule "ornplugin"]
+	path = ornplugin
+	url = https://github.com/mentaljam/ornplugin.git

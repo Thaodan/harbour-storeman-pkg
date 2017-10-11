@@ -1,0 +1,3 @@
+[submodule "harbour-storeman"]
+	path = harbour-storeman
+	url = https://github.com/Thaodan/harbour-storeman
