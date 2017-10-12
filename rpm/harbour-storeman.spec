@@ -56,7 +56,6 @@ cd %{name}
 # << build post
 
 %install
-rm -rf %{buildroot}
 # >> install pre
 # << install pre
 %qmake5_install
