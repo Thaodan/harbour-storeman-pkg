@@ -18,7 +18,6 @@ Release:    2
 Group:      Qt/Qt
 License:    LICENSE
 URL:        https://github.com/mentaljam/harbour-storeman
-Source100:  harbour-storeman.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   PackageKit >= 0.8.9
 Requires:   PackageKit-Qt5 >= 0.8.8
