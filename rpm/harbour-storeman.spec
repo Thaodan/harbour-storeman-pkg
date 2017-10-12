@@ -51,7 +51,7 @@ cd %{name}
 
 
 %qtc_make %{?_smp_mflags}
-
+find
 # >> build post
 # << build post
 
