@@ -44,9 +44,10 @@ Unofficial native OpenRepos.net client for Sailfish OS
 %build
 # >> build pre
 # << build pre
-
+ls
 %qtc_qmake5  \
-    VERSION=%{version}
+    VERSION=%{version} \
+
 
 %qtc_make %{?_smp_mflags}
 
