@@ -51,11 +51,13 @@ cd %{name}
 
 
 %qtc_make %{?_smp_mflags}
-find
+
 # >> build post
 # << build post
 
 %install
+cd %{name}
+#rm -rf %{buildroot}
 # >> install pre
 # << install pre
 %qmake5_install
