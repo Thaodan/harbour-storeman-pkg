@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
+BuildRequires:  pkgconfig(QtConcurrent)
 BuildRequires:  pkgconfig(packagekit-qt5) >= 0.8.8
 BuildRequires:  libsolv-devel
 BuildRequires:  desktop-file-utils
