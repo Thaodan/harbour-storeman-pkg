@@ -31,7 +31,7 @@ BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(packagekit-qt5) >= 0.8.8
 BuildRequires:  libsolv-devel
 BuildRequires:  desktop-file-utils
-BuildRequires:  libqt5-linguist
+BuildRequires:  qt5-qttools-linguist
 
 %description
 Unofficial native OpenRepos.net client for Sailfish OS
