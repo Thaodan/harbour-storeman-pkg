@@ -1,3 +1,6 @@
+[submodule "--force"]
+	path = --force
+	url = https://github.com/mentaljam/harbour-storeman
 [submodule "harbour-storeman"]
 	path = harbour-storeman
-	url = https://github.com/Thaodan/harbour-storeman.git
+	url = https://github.com/mentaljam/harbour-storeman
