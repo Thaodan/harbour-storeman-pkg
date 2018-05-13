@@ -13,25 +13,31 @@ Name:       harbour-storeman
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    OpenRepos Client for Sailfish OS
-Version:    0.0.15
-Release:    2
+Version:    0.0.25
+Release:    1
 Group:      Qt/Qt
-License:    LICENSE
+License:    MIT
 URL:        https://github.com/mentaljam/harbour-storeman
-Source: %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.bz2
+Source100:  harbour-storeman.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   PackageKit >= 0.8.9
-Requires:   PackageKit-Qt5 >= 0.8.8
+Requires:   nemo-qml-plugin-dbus-qt5
+Requires:   nemo-qml-plugin-notifications-qt5
+Requires:   connman-qt5-declarative
 Requires:   libsolv0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
+BuildRequires:  pkgconfig(nemodbus)
+BuildRequires:  pkgconfig(connman-qt5)
+BuildRequires:  pkgconfig(nemonotifications-qt5)
+BuildRequires:  pkgconfig(Qt5Sparql)
 BuildRequires:  pkgconfig(Qt5Concurrent)
-BuildRequires:  pkgconfig(packagekit-qt5) >= 0.8.8
 BuildRequires:  libsolv-devel
-BuildRequires:  desktop-file-utils
+BuildRequires:  PackageKit-Qt5-devel
 BuildRequires:  qt5-qttools-linguist
+BuildRequires:  desktop-file-utils
 
 %description
 Unofficial native OpenRepos.net client for Sailfish OS
@@ -48,8 +54,7 @@ Unofficial native OpenRepos.net client for Sailfish OS
 # << build pre
 cd %{name}
 %qtc_qmake5  \
-    VERSION=%{version} \
-
+    VERSION=%{version}
 
 %qtc_make %{?_smp_mflags}
 
@@ -58,7 +63,7 @@ cd %{name}
 
 %install
 cd %{name}
-#rm -rf %{buildroot}
+rm -rf %{buildroot}
 # >> install pre
 # << install pre
 %qmake5_install
@@ -76,7 +81,7 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
-%{_sharedstatedir}/polkit-1/localauthority/50-local.d/50-harbour-storeman-packagekit.pkla
+%{_datadir}/mapplauncherd/privileges.d/%{name}
 %{_datadir}/dbus-1/services/harbour.storeman.service
 # >> files
 # << files
