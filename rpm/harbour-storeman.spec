@@ -52,7 +52,9 @@ Unofficial native OpenRepos.net client for Sailfish OS
 %build
 # >> build pre
 # << build pre
+ls
 cd %{name}
+ls
 %qtc_qmake5  \
     VERSION=%{version}
 
