@@ -13,19 +13,20 @@ Name:       harbour-storeman
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    OpenRepos Client for Sailfish OS
-Version:    0.0.25
-Release:    2
+Version:    0.0.27
+Release:    1
 Group:      Qt/Qt
 License:    MIT
 URL:        https://github.com/mentaljam/harbour-storeman
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-storeman.yaml
-Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   sailfish-version >= 2.1.4
+Requires:   sailfishsilica-qt5
 Requires:   nemo-qml-plugin-dbus-qt5
 Requires:   nemo-qml-plugin-notifications-qt5
 Requires:   connman-qt5-declarative
 Requires:   libsolv0
-BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
+BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
@@ -52,9 +53,7 @@ Unofficial native OpenRepos.net client for Sailfish OS
 %build
 # >> build pre
 # << build pre
-ls
 cd %{name}
-ls
 %qtc_qmake5  \
     VERSION=%{version}
 
