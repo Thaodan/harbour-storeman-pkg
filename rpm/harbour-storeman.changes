@@ -1,3 +1,82 @@
+* Tue Feb 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.2-1
+- Update translations
+
+* Sat Feb 16 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.1-1
+- Add an ability to order items of the main page
+- Fix disappearing grid of recent updates
+- Remove old code
+- Refactoring
+- Update translations
+
+* Sun Feb 10 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.0-1
+- Better handling of empty and deleted packages
+- Allow to select which items to backup (repos, installed apps, bookmarks)
+- Allow to set a backup filename
+- Fix displaying bookmarks
+- Better handling of network status
+- Fix showing network error after user session expiry
+- Add the ability to open the own applications page for publishers
+- Better tap hints
+- Revamp UI:
+- Add new main page
+- Remove "This device" page
+- Move most entries from this device page to the main page
+- Move the authorization and backups buttons to the settings page
+- Add an option to switch to recently updated packages on start
+- Application page: better handling of an empty changelog
+- Update translations
+- Different small fixes and optimizations
+
+* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-3
+- Fix layout for various devices, orientations and system font sizes (thanks to Matti Viljanen)
+- Hide pulley menu on the comments page when page header is hidden (thanks to Matti Viljanen)
+- ApplicationPage.qml: Add "like" buttun to make rating applications more clear
+- Fix showing apps with no packages
+- Handle invalid bookmarks
+- Add animations for list view items
+- Update translations
+- Update the list of contributors
+
+* Tue Nov 27 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.32-1
+- SearchPage.qml: Force focus on the search field when is activated with the search action from the cover and when is cleared
+- CommentDelegate.qml: Fix strings formatting
+- Add ability to delete own comments
+- Refactoring: Merge OrnApiRequest into OrnClient
+- Refactoring: Use a template base class for models
+- Refactoring: Use std::deque instead of QList as the data container for the models
+- Refactoring: Pass arguments by value for primitive types
+- UI: Better loading for tags and bookmarks pages
+- Update translations
+- Update README.md
+
+* Thu Nov 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.31-1
+- Fix comment field was not writable to, if the very first comment and while the device was in landscape orientation
+- Fix hiding of page header of the comments page in landscape orientation
+- Fix rendering of comments
+- Handle apps with no packages
+- Update translations
+
+* Sun Nov 18 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.30-1
+- Clear the comment field only if comment was successfully sent
+- Fixed a bug due to which it was impossible to remove an application if an update was available
+- Comment delegate: fix the user label icon
+- Settings: always show the "Disable notifications" switcher
+- Installed applications: show both the installed and the available versions for packages with available updates
+- Update translations
+
+* Sat Nov  3 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.29-1
+- Update translations
+- Try to show packages of an author (repository)
+
+* Fri Jul 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.28-1
+- Notifications: Don't open a page on tap if it's already openned
+- Force update repos on the update timer reset
+- ApplicationPage.qml: Add the option to reload data
+- ScreenshotPage.qml: use the FullscreenContentPage for screenshots (like in the Store app)
+- Use the system theme icon as a default app icon
+- Update Silica usage (use openMenu in ListItem instead of showMenu)
+- Fix some bugs
+
 * Fri Jun  8 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.27-1
 - Launch Storeman as a single instance
 - Don't block Storeman on cache refreshing
